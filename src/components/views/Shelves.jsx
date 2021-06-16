@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Helpers_Prateleiras from "../../Helpers/Prateleiras";
 import { changeBook, useBooks } from "../../hooks/Books";
-import Livro from "./Livro";
+import Book from "./Book";
 
 const Shelves = () => {
     const [renderizar, setRenderizar] = useState(false);
@@ -23,12 +23,12 @@ const Shelves = () => {
         <div>
             {organizedBooksOnShelves.map((shelf) => {
                 return (
-                    <div className="bg-white w-full h-2/4 p-4" key={shelf.nome}>
+                    <div className="bg-white w-full h-2/4 p-4 mt-3" key={shelf.nome}>
                         <h2>{shelf.nome}</h2>
-                        <div className="flex p-4">
+                        <div className="flex p-4 mt-3">
                             {shelf.books.map((book) => {
                                 return (
-                                    <Livro
+                                    <Book
                                         id={book.id}
                                         title={book.title}
                                         authors={book.authors}

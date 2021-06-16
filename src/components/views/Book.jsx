@@ -3,7 +3,7 @@ import { Card, Dropdown, DropdownButton } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Helpers_Prateleiras from "../../Helpers/Prateleiras";
 
-const Livro = ({ id, title, status, linkImg, alterarStatusDoLivro }) => {
+const Book = ({ id, title, status, linkImg, alterarStatusDoLivro }) => {
     const aoAlterarStatusDoLivro = (status) => {
         alterarStatusDoLivro(id, status);
     };
@@ -52,4 +52,4 @@ const Livro = ({ id, title, status, linkImg, alterarStatusDoLivro }) => {
     );
 };
 
-export default Livro;
+export default Book;

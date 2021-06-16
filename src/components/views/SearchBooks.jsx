@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { changeBook, useBooks } from "../../hooks/Books";
-import Livro from "./Livro";
+import Book from "./Book";
 
 const SearchBusca = () => {
     const [renderizar, setRenderizar] = useState(false);
@@ -47,7 +47,7 @@ const SearchBusca = () => {
                 <div className="flex p-4">
                     {booksToShow.map((book) => {
                         return (
-                            <Livro
+                            <Book
                                 id={book.id}
                                 title={book.title}
                                 authors={book.authors}
